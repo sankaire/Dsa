@@ -25,3 +25,17 @@ const containsDuplicateSorting = (nums) => {
     }
     return false
 }
+
+
+//using an object time complexity O(n) and space complexity O(n)
+const containsDuplicateObject = (nums) => {
+    let obj = {}
+    for (let i = 0; i < nums.length; ++i) {
+        if (obj[nums[i]]) {
+            return true
+        } else {
+            obj[nums[i]] = true
+        }
+    }
+    return false
+}
